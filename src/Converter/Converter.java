@@ -11,7 +11,7 @@ import static java.lang.System.out;
 
 public class Converter {
     public static Object convertTo(Object fromObj, Class toClazz) {
-        String fmt = "%6S:  %-12s = %s%n";
+        String fmt = "%6S:  %-7s = %s%n";
         Class fromClazz = fromObj.getClass();
         Map<String, Field> fromFields = Arrays.stream(fromClazz.getDeclaredFields())
                 .filter(field -> !field.isAnnotationPresent(Skip.class))
